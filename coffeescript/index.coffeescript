@@ -1,0 +1,33 @@
+vm = new Vue
+	el: "#app"
+	methods:
+		changeAndPlay: (e) ->
+			src = "http://www.bensound.org/bensound-music/bensound-"
+			this.track.title = e.currentTarget.textContent
+			linkText = this.track.title.replace(/\s+/g, "").toLowerCase()
+			this.track.play = src + linkText + ".mp3"
+	mounted: () ->
+		this.$watch "track.title", ->
+			this.$refs.player.load()
+	data: () ->
+		track:
+			title: ""
+			play: ""
+		musics: [
+			"Cute"
+			"Little Idea"
+			"Acoustic Breeze"
+			"Epic"
+			"Buddy"
+			"Happiness"
+			"Funny Song"
+			"Energy"
+			"Memories"
+			"Ukulele"
+			"Instinct"
+			"Jazzy Frenchy"
+			"Sunny"
+			"House"
+			"Tenderness"
+		]
+			

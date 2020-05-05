@@ -1,0 +1,66 @@
+
+* {
+  outline: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  letter-spacing: 0.15em;
+}
+
+body, html {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Dosis", arial, sans-serif;
+  background: #ccc;
+  background: url("../images/800.jpg") 50% 50% no-repeat;
+  background-size: cover;
+  text-align: center;
+}
+body::before {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+#app {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.6);
+  padding: 15px;
+  box-shadow: 1px 2px 8px #999;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.music-box {
+  width: 300px;
+  background: rgba(255, 255, 255, 0.6);
+  padding: 8px;
+}
+.music-box h1 {
+  margin: 0;
+  margin-bottom: 8px;
+}
+.music-box .list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.music-box .list span {
+  cursor: pointer;
+  display: block;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  margin: 2px 0;
+  padding: 2px 0;
+}
+.music-box .list li:hover span, .music-box .list li.active span {
+  background: #0089ff;
+  color: white;
+  padding-left: 8px;
+}
